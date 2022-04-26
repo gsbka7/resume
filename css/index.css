@@ -441,18 +441,17 @@ body{
 
 .protfolio .icon .item{
     cursor: pointer;
-    position: relative;
     width: calc(25% - 20px);
     margin: 20px 20px 0 0;
     border-radius: 20px;
     box-shadow: 10px 10px 15px black;
     transition: 1s;
-    transform: rotateY(180deg);
+    transform: translate(-50px, -50px);
     opacity: 0;
 }
 
 .protfolio.show .icon .item{
-    transform: rotateY(0deg);
+    transform: translate(0);
     opacity: 1;
 }
 
