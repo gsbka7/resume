@@ -174,6 +174,16 @@ body{
 
 }
 
+.info{
+    opacity: 0;
+}
+
+.info.show{
+    transition: 2.5s;
+    opacity: 0.9;
+
+}
+
 .container.index{
     display: flex;
     justify-content: space-between;
@@ -219,7 +229,7 @@ body{
 
 }
 
-.person-info span.title{
+.person-info span.info-title{
     padding-bottom: 50px;
 
 }
@@ -281,18 +291,67 @@ body{
     0%{top: 630px};
 
  }
-
-.about, .experience, .skill, .protfolio{
+ 
+ .about, .experience, .skill, .protfolio{
+     position: relative;
+     
+    }
+    
+.about .content.show{
     position: relative;
+    top: 0;
+    opacity: 0;
+    animation-name: aboutContentShow;
+    animation-duration: .6s;
+    animation-delay: 1.5s;
+    animation-iteration-count:1;
+    animation-timing-function:linear;
+    animation-fill-mode: forwards;
     
 }
 
-.about .title, .experience .title, .skill .title , .protfolio .title{
+@keyframes aboutContentShow {
+    0% {top: 40px;}
+    100% {opacity: 1;}
+
+}
+
+.about .title{
     position: absolute;
     top: 40px;
     display: block;
     font-size: 40px;
+    opacity: 0;
     transform: rotate(-45deg);
+    animation-name: aboutTitle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes aboutTitle {
+    0% {transform: rotate(0deg);top: 80px;}
+    100% {opacity: 1}
+
+}
+
+.experience .title, .skill .title , .protfolio .title{
+    position: absolute;
+    top: 80px;
+    display: block;
+    font-size: 40px;
+    transition: 1s;
+    opacity: 0;
+    
+}
+
+.experience .title.show, .skill .title.show , .protfolio .title.show{
+    top: 40px;
+    transform: rotate(-45deg);
+    opacity: 1;
     
 }
 
@@ -309,13 +368,30 @@ body{
 
 .about .content p, .experience .content span{
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 0;
     font-size: 20px;
     letter-spacing: 2px;
 
 }
-.experience .content span{
+
+.experience .content .exp span{
     display: block;
+    padding-right: 50px;
+    opacity: 0;
+}
+
+.experience .content .exp.show span{
+    animation-name: expShow;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expShow {
+    0% {padding-right: 0px}
+    100% {opacity: 1;}
+    
 }
 
 .skill .icon, .protfolio .icon{
@@ -329,8 +405,26 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: calc(100% / 8);
-    
+    opacity: 0;
+    transform: rotate(0deg);
+
+}
+
+.skill.show .icon .item{
+    animation-name: skillShow;
+    animation-duration: .8s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skillShow {
+    0% {top: -150px; transform: rotate(-10deg);}
+    33% {top :0;}
+    66% {top: -50px; transform: rotate(10deg)}
+    100% {top: 0;opacity: 1}
 }
 
 .skill .icon .item img{
@@ -352,7 +446,14 @@ body{
     margin: 20px 20px 0 0;
     border-radius: 20px;
     box-shadow: 10px 10px 15px black;
-    transition: .4s;
+    transition: 1s;
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.protfolio.show .icon .item{
+    transform: rotateY(0deg);
+    opacity: 1;
 }
 
 .protfolio .icon .item:hover{
@@ -550,7 +651,17 @@ body{
         align-items: center;
         
     }
-    .about .title, .experience .title, .skill .title , .protfolio .title{
+
+    .about .title{
+        clear: both;
+        position: relative;
+        top: 0px;
+        display: block;
+        font-size: 35px;
+        transform: rotate(0deg);
+    }
+
+    .experience .title.show, .skill .title.show , .protfolio .title.show{
         clear: both;
         position: relative;
         top: 0px;
