@@ -36,7 +36,7 @@ const skillElement = document.querySelector('.skill')
 const protfolipElement = document.querySelector('.protfolio')
 
 document.addEventListener('scroll',function() {
-    for (let i = 1; i < titleElement.length; i++) {
+    for (let i = 0; i < titleElement.length; i++) {
         const titleDistance = titleElement[i].getBoundingClientRect().top + titleElement[i].clientHeight * 0.5;
         if(window.innerHeight > titleDistance){
             titleElement[i].classList.add('show')
