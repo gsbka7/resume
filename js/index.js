@@ -41,6 +41,8 @@ document.addEventListener('scroll',function() {
         if(window.innerHeight > titleDistance){
             titleElement[i].classList.add('show')
         }
+
+        console.log(titleElement[i].getBoundingClientRect().top, titleElement[i].clientHeight)
     }
     for (let i = 0; i < expElement.length; i++){
         const expElementDistence = expElement[i].getBoundingClientRect().top + expElement[i].clientHeight * 0.3
