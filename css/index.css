@@ -402,9 +402,8 @@ body{
 .protfolio .icon{
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0 100px 150px;
+    padding: 30px 0 30px 150px;
     width: 100%;
-
 }
 
 .skill .icon .img{
@@ -482,42 +481,17 @@ body{
     opacity: 1;
     
 }
-
-/* .skill .icon .item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: calc(100% / 8);
-    opacity: 0;
-    transform: rotate(0deg);
-
+.protfolio .protfolio-item-title{
+    width: calc(100% + 100px);
+    font-size: 30px;
+    text-align: center;
+    padding-top: 60px;
 }
 
-.skill.show .icon .item{
-    animation-name: skillShow;
-    animation-duration: .8s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.protfolio .protfolio-items .item {
+    /* opacity: 0; */
+
 }
-
-@keyframes skillShow {
-    0% {top: -150px; transform: rotate(-10deg);}
-    33% {top :0;}
-    66% {top: -50px; transform: rotate(10deg)}
-    100% {top: 0;opacity: 1}
-}
-
-
-
-.skill .item span{
-    padding: 20px 0;;
-    font-size: 18px;
-    font-weight: 600;
-    
-} */
-
 .protfolio .icon .item{
     cursor: pointer;
     width: calc(25% - 20px);
@@ -525,11 +499,10 @@ body{
     border-radius: 20px;
     box-shadow: 10px 10px 15px black;
     transition: 1s;
-    transform: translate(-50px, -50px);
-    opacity: 0;
+    /* transform: translate(-50px, -50px); */
 }
 
-.protfolio.show .icon .item{
+.protfolio.show .icon .item ,.protfolio .protfolio-items .item.show{
     transform: translate(0);
     opacity: 1;
 }
@@ -752,7 +725,7 @@ body{
         
     }
 
-    .about .content, .experience .content, .skill .icon, .protfolio .icon{
+    .about .content, .experience .content, .skill .icon{
         padding: 30px 35px 50px;
     
     }
