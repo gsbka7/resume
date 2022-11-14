@@ -172,35 +172,40 @@
                                             <a href="https://github.com/gsbka7/Vue_learning" target="_blank">Github</a>
                                         </p>
                                         <p class="learn">練習：
-                                            <a href="https://gsbka7.github.io/rakuten_ranking_practice_index/" target="_blank">楽天商品ランキング(Rakuten Ichiba Item Ranking)</a>
+                                            <a href="https://gsbka7.github.io/rakuten_ranking_practice_index/"
+                                                target="_blank">楽天商品ランキング(Rakuten Ichiba Item Ranking)</a>
                                         </p>
                                     </div>
                                     <div class="learn-item">
                                         <img src="./img/logo-jquery.png" alt="">
                                         <span>jQuery</span>
                                         <p class="learn">學習筆記：
-                                            <a href="https://github.com/gsbka7/jQuery_learning" target="_blank">Github</a>
+                                            <a href="https://github.com/gsbka7/jQuery_learning"
+                                                target="_blank">Github</a>
                                         </p>
                                     </div>
                                     <div class="learn-item">
                                         <img src="./img/logo-mysql.png" alt="">
                                         <span>MySQL</span>
                                         <p class="learn">學習筆記：
-                                            <a href="https://github.com/gsbka7/MySQL_learning" target="_blank">Github</a>
+                                            <a href="https://github.com/gsbka7/MySQL_learning"
+                                                target="_blank">Github</a>
                                         </p>
                                     </div>
                                     <div class="learn-item">
                                         <img src="./img/logo-js.png" alt="">
                                         <span>JavaScript 高階函式 & ES6語法</span>
                                         <p class="learn">學習筆記：
-                                            <a href="https://github.com/gsbka7/js_higher_order_function" target="_blank">Github</a>
+                                            <a href="https://github.com/gsbka7/js_higher_order_function"
+                                                target="_blank">Github</a>
                                         </p>
                                     </div>
                                     <div class="learn-item">
                                         <img src="./img/logo-nodejs.svg" alt="">
                                         <span>Node.js</span>
                                         <p class="learn">學習筆記：
-                                            <a href="https://github.com/gsbka7/nodejs_learning" target="_blank">Github</a>
+                                            <a href="https://github.com/gsbka7/nodejs_learning"
+                                                target="_blank">Github</a>
                                         </p>
                                     </div>
                                 </div>
@@ -375,7 +380,9 @@
             alert('密碼正確');
         } else {
             alert('密碼錯誤，請再輸入一次');
-            location.reload();
+            if (prompt('請再次輸入密碼') !== 'sha-resume') {
+                alert('密碼錯誤，即將跳轉至Google')
+                location.href = 'http://google.com'}
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -383,4 +390,5 @@
     <script src="./js/index.js"></script>
 
 </body>
+
 </html>
