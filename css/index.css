@@ -482,7 +482,7 @@ body{
     
 }
 .protfolio .protfolio-item-title{
-    width: calc(100% + 100px);
+    width: calc(100%);
     font-size: 30px;
     text-align: center;
     padding-top: 60px;
@@ -734,5 +734,12 @@ body{
         flex-direction: column;
         align-items: center;
         width: calc(100% / 2);
+    }
+    .protfolio .icon{
+        padding: 0;
+    }
+    .skill .icon .img .logo .learn-item{
+        width: calc(100% / 2);
+        padding-bottom: 35px;
     }
 }
